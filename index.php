@@ -117,23 +117,6 @@ if($sumatoriaSalarios>$sucursalB && $sumatoriaSalarios>$sucursalC ){
     echo("La surcusal C tiene mayor ingreso $sucursalC");
 }
 
-/*
-$usuario1=("Juan".123456789."calle 3".1200000);
-echo("<br>");
-echo($usuario1);
-     
-$usuario2=>array("Matilde"123453451,"calle 5",1300000);
-$usuario3=>array("Simon",123455432,"calle 6",1250000);
-$usuario4=>array("Alenjandro",123451234,"calle 7",1100000);
-$usuario5=>array("María",123451974,"calle 9",1000000);
-
-echo("<br>");
-print_r($usuario1);
-     
-         }
-     }
-
-*/
 
 
 echo "<br>","<br>","<br>";
