@@ -122,10 +122,13 @@ if($sumatoriaSalarios>$sucursalB && $sumatoriaSalarios>$sucursalC ){
 echo "<br>","<br>","<br>";
 echo("PUNTO 6");
 echo "<br>"; 
-for($par=2;$par<=20;$par+=2)
-{
-    echo(" El numero par es:".$par."<br>");
- }
+
+$pares=array('1'=>"2",'2'=>4,'3'=>6,'4'=>8,'5'=>10,'6'=>12,'7'=>14,'8'=>16,'9'=>18,'10'=>20);
+foreach($pares as $clave=>$valor){
+    echo("El $clave número par es: $valor"."<br>");
+    
+}
+
 
 
 echo "<br>","<br>","<br>";
@@ -133,8 +136,8 @@ echo("PUNTO 7");
 echo "<br>"; 
 
 $salpicon=array('dulce1'=>"Banano",'dulce2'=>"Manzana",'dulce3'=>"Murazno",'acido1'=>"Pina",'acido2'=>"Naranja",'acido3'=>"Lulo");
-echo("El salpicon esta compuesto por:");
-echo "<br>";
+echo("El salpicon esta compuesto por: ");
+echo "<br>"; 
     print_r($salpicon);
 
 
@@ -142,6 +145,53 @@ echo "<br>","<br>","<br>";
 echo("PUNTO 8");
 echo "<br>"; 
 
-calcularEdadJugadores(1991,2020);
-calcularEdadJugadores(1995,2020);
-calcularEdadJugadores(1987,2020);
+calcularEdad(1991,2020);
+calcularEdad(1995,2020);
+calcularEdad(1987,2020);
+
+
+echo "<br>","<br>","<br>";
+echo("PUNTO 9");
+echo "<br>"; 
+
+
+biotipo($biotipo1=1.65);
+biotipo($biotipo1=1.78);
+biotipo($biotipo1=1.95);
+
+echo "<br>","<br>","<br>";
+echo("PUNTO 10");
+echo "<br>"; 
+
+$usuarios=array(
+    'usuario1'=>array('Jugador1'=>"Radamel Falcao",'año'=>1986,'posicion'=>"Delantero",biotipo($biotipo=>1.77),
+    'usuario2'=>array('Jugador2'=>"James Rodríguez",'año'=>2020-1991,'posicion'=>"Medio",'estatura'=>1.81),
+    'usuario3'=>array('Jugador3'=>"Juan Cuadrado",'año'=>2020-1988,'posicion'=>"Delantero",'estatura'=>1.78),
+    'usuario4'=>array('Jugador4'=>"Yerry Mina",'año'=>2020-1994,'posicion'=>"Defensor",'estatura'=>1.95),
+    'usuario5'=>array('Jugador5'=>"David Ospina",'año'=>2020-1988,'posicion'=>"Portero",'estatura'=>1.83),
+    'usuario6'=>array('Jugador6'=>"Davinsón Sanchez",'año'=>2020-1996,'posicion'=>"Delantero",'estatura'=>1.87),
+    'usuario7'=>array('Jugador7'=>"Duvan Zapata",'año'=>2020-1991,'posicion'=>"Delantero",'estatura'=>1.86),
+    'usuario8'=>array('Jugador8'=>"Wilmar Barrios",'año'=>2020-1993,'posicion'=>"Medio",'estatura'=>1.78),
+    'usuario9'=>array('Jugador9'=>"Mateus Uribe",'año'=>2020-1991,'posicion'=>"Medio",'estatura'=>1.80));  
+echo("<br>");
+//print_r($usuarios);
+
+
+echo("<br>....................................<br>");
+foreach($usuarios as $clavesArreglosUnidimensionales=>$arreglosUnidimensionales){
+   // echo($clavesArreglosUnidimensionales);
+
+    //print_r($arreglosUnidimensionales);
+    echo("<br>");
+    foreach($arreglosUnidimensionales  as $valorers){
+        
+       echo($valorers);
+       echo("<br>");
+
+
+    }
+}
+
+
+?>
+
