@@ -164,7 +164,7 @@ echo("PUNTO 10");
 echo "<br>"; 
 
 $usuarios=array(
-    'usuario1'=>array('Jugador1'=>"Radamel Falcao",'año'=>1986,'posicion'=>"Delantero",biotipo($biotipo=>1.77),
+    'usuario1'=>array('Jugador1'=>"Radamel Falcao",'año'=>1986,'posicion'=>"Delantero",'estatura'>1.77),
     'usuario2'=>array('Jugador2'=>"James Rodríguez",'año'=>2020-1991,'posicion'=>"Medio",'estatura'=>1.81),
     'usuario3'=>array('Jugador3'=>"Juan Cuadrado",'año'=>2020-1988,'posicion'=>"Delantero",'estatura'=>1.78),
     'usuario4'=>array('Jugador4'=>"Yerry Mina",'año'=>2020-1994,'posicion'=>"Defensor",'estatura'=>1.95),
