@@ -79,7 +79,7 @@ $IMC=$peso/($altura*$altura);
     echo("Sueldo Mensual <br>");
     $Horastrab=36;
     $Pagosemanal1=20000;
-   echo("Para un total de: .$Horastrab"."Horas."."se obtiene un valor hora de:."."$".$Pagosemanal1);
+   echo("Para un total de: $Horastrab"."Horas."."se obtiene un valor hora de:."."$".$Pagosemanal1);
    echo "<br>";
     if($Horastrab<=40){
         $Pagosemanal=$Horastrab*20000;
@@ -95,27 +95,47 @@ $IMC=$peso/($altura*$altura);
     echo "<br>"; 
     echo("Almacenar Datos <br>");
 
-$sal1=1200000;
-$sal2=1300000;
+$sal1=3520000;
+$sal2=4580000;
 $sal3=1250000;
-$sal4=1100000;
-$sal5=1000000;
+$sal4=3800000;
+$sal5=6490000;
 $sucursalA=0;
 $sucursalB=20000000;
 $sucursalC=15000000;
 
+$user=array(
+    'user1'=>array('user1'=>"Juan Perez",'tel'=>322456798,'direcion'=>"Cll 100 sur # 35a-25",'salario'=>3520000),
+    'user2'=>array('user2'=>"Ana Gaviria",'tel'=>3014569852,'direcion'=>"Cll 90  # 10-80",'salario'=>4580000),
+    'user3'=>array('user3'=>"Pedro Mesa",'tel'=>3108965474,'direcion'=>"Cll 85 # 25-10",'salario'=>1250000),
+    'user4'=>array('user4'=>"Catalina Castaño",'tel'=>3148555555,'direcion'=>"Cll 100 sur # 35a-27",'salario'=>3800000),
+    'user5'=>array('user5'=>"Gabriel Rodrigues",'tel'=>3001234879,'direcion'=>"Cr 37 # 100-20",'salario'=>6490000)
+);
 $sumatoriaSalarios=($sal1+$sal2+$sal3+$sal4+$sal5);
 echo("Los usuarios registrados en la surcusal A son :");
 echo "<br>"; 
-if($sumatoriaSalarios>$sucursalB && $sumatoriaSalarios>$sucursalC ){
-    echo("La surcusal A tiene mayor ingreso $sucursalA");
-     $sucursalA=$sumatoriaSalarios;
-}elseif($sucursalB>$sucursalC && $sucursalB>$sumatoriaSalarios){
-    echo("La surcusal B tiene mayor ingreso $sucursalB");
-}else
-{
-    echo("La surcusal C tiene mayor ingreso $sucursalC");
-}
+    foreach($user as $clavedimen=>$sucursalA){
+        echo "<br>";
+        foreach($sucursalA as $clave=> $valor){
+            echo( $valor." - " );  
+        }
+    }
+    $sucursala=sumasalario(3520000,4580000,1250000,3800000,6490000);
+    echo "<br>"; 
+
+    if($sucursala>$sucursalB && $$sucursala>$sucursalC ){
+        echo "<br>";
+        echo("La surcusal A tiene mayor ingreso $sucursalA");
+         $sucursalA=$sucursala;
+    }elseif($sucursalB>$sucursalC && $sucursalB>$sucursala){
+        echo "<br>"; 
+        echo("La surcusal B tiene mayor ingreso $sucursalB ");
+
+    }else
+    {
+        echo "<br>"; 
+        echo("La surcusal C tiene mayor ingreso $sucursalC");
+    }
 
 
 
@@ -163,26 +183,20 @@ echo "<br>","<br>","<br>";
 echo("PUNTO 10");
 echo "<br>"; 
 
-$usuarios=array(
-    'usuario1'=>array('Jugador1'=>"Radamel Falcao",'año'=>1986,'posicion'=>"Delantero",'estatura'>1.77),
-    'usuario2'=>array('Jugador2'=>"James Rodríguez",'año'=>2020-1991,'posicion'=>"Medio",'estatura'=>1.81),
-    'usuario3'=>array('Jugador3'=>"Juan Cuadrado",'año'=>2020-1988,'posicion'=>"Delantero",'estatura'=>1.78),
-    'usuario4'=>array('Jugador4'=>"Yerry Mina",'año'=>2020-1994,'posicion'=>"Defensor",'estatura'=>1.95),
-    'usuario5'=>array('Jugador5'=>"David Ospina",'año'=>2020-1988,'posicion'=>"Portero",'estatura'=>1.83),
-    'usuario6'=>array('Jugador6'=>"Davinsón Sanchez",'año'=>2020-1996,'posicion'=>"Delantero",'estatura'=>1.87),
-    'usuario7'=>array('Jugador7'=>"Duvan Zapata",'año'=>2020-1991,'posicion'=>"Delantero",'estatura'=>1.86),
-    'usuario8'=>array('Jugador8'=>"Wilmar Barrios",'año'=>2020-1993,'posicion'=>"Medio",'estatura'=>1.78),
-    'usuario9'=>array('Jugador9'=>"Mateus Uribe",'año'=>2020-1991,'posicion'=>"Medio",'estatura'=>1.80));  
+$Jugadores=array(
+    'Jugadores1'=>array('Jugador1'=>"Radamel Falcao",'año'=>1986,'posicion'=>"Delantero",'estatura'=>1.77),
+    'Jugadores2'=>array('Jugador2'=>"James Rodríguez",'año'=>1991,'posicion'=>"Medio",'estatura'=>1.81),
+    'Jugadores3'=>array('Jugador3'=>"Juan Cuadrado",'año'=>1988,'posicion'=>"Delantero",'estatura'=>1.78),
+    'Jugadores4'=>array('Jugador4'=>"Yerry Mina",'año'=>1994,'posicion'=>"Defensor",'estatura'=>1.95),
+    'Jugadores5'=>array('Jugador5'=>"David Ospina",'año'=>1988,'posicion'=>"Portero",'estatura'=>1.83),
+    'Jugadores6'=>array('Jugador6'=>"Davinsón Sanchez",'año'=>1996,'posicion'=>"Delantero",'estatura'=>1.87),
+    'Jugadores7'=>array('Jugador7'=>"Duvan Zapata",'año'=>1991,'posicion'=>"Delantero",'estatura'=>1.86),
+    'Jugadores8'=>array('Jugador8'=>"Wilmar Barrios",'año'=>1993,'posicion'=>"Medio",'estatura'=>1.78),
+    'Jugadores9'=>array('Jugador9'=>"Mateus Uribe",'año'=>1991,'posicion'=>"Medio",'estatura'=>1.80));  
 echo("<br>");
-//print_r($usuarios);
-
-
-echo("<br>....................................<br>");
+print_r($Jugadores)
 foreach($usuarios as $clavesArreglosUnidimensionales=>$arreglosUnidimensionales){
-   // echo($clavesArreglosUnidimensionales);
-
-    //print_r($arreglosUnidimensionales);
-    echo("<br>");
+   echo("<br>");
     foreach($arreglosUnidimensionales  as $valorers){
         
        echo($valorers);
