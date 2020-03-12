@@ -6,6 +6,11 @@ function calcularEdad($nacimiento,$actual){
  echo("<br> si nacio en  $nacimiento usted tiene : $edad años");
 }
 
+function sumasalario($sal1,$sal2,$sal3,$sal4,$sal5){
+    $sucursala=$sal1+$sal2+$sal3+$sal4+$sal5;
+    return $sucursala;
+    
+}
 function biotipo($biotipo){
     $biotipo1="Biotipo Bajo";
     $biotipo2="Biotipo Promedio";
