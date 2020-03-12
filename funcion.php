@@ -24,6 +24,26 @@ if ($biotipo<1.70){
         }
         
     }
+    //Ejercicio 10
+
+function calcularedadjugadores($nacimiento,$actual){
+    $edad=$actual-$nacimiento;
+       return ($edad);
+}
+
+function biotipojugadores10($biotiposjugadores){
+    $biotipos1="Biotipo Bajo";
+    $biotipos2="Biotipo Promedio";
+    $biotipos3="Biotipo Superior";
+if ($biotiposjugadores<1.70){
+        return($biotipos1);
+    }elseif($biotiposjugadores>=1.70 && $biotiposjugadores<1.80){
+        return($biotipos2);
+        }elseif($biotiposjugadores>=1.80){
+            return($biotipos3);
+    }
+        
+}
+
+?>
  
-   ?>     
-   

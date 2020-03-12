@@ -183,29 +183,28 @@ echo "<br>","<br>","<br>";
 echo("PUNTO 10");
 echo "<br>"; 
 
-$Jugadores=array(
-    'Jugadores1'=>array('Jugador1'=>"Radamel Falcao",'año'=>1986,'posicion'=>"Delantero",'estatura'=>1.77),
-    'Jugadores2'=>array('Jugador2'=>"James Rodríguez",'año'=>1991,'posicion'=>"Medio",'estatura'=>1.81),
-    'Jugadores3'=>array('Jugador3'=>"Juan Cuadrado",'año'=>1988,'posicion'=>"Delantero",'estatura'=>1.78),
-    'Jugadores4'=>array('Jugador4'=>"Yerry Mina",'año'=>1994,'posicion'=>"Defensor",'estatura'=>1.95),
-    'Jugadores5'=>array('Jugador5'=>"David Ospina",'año'=>1988,'posicion'=>"Portero",'estatura'=>1.83),
-    'Jugadores6'=>array('Jugador6'=>"Davinsón Sanchez",'año'=>1996,'posicion'=>"Delantero",'estatura'=>1.87),
-    'Jugadores7'=>array('Jugador7'=>"Duvan Zapata",'año'=>1991,'posicion'=>"Delantero",'estatura'=>1.86),
-    'Jugadores8'=>array('Jugador8'=>"Wilmar Barrios",'año'=>1993,'posicion'=>"Medio",'estatura'=>1.78),
-    'Jugadores9'=>array('Jugador9'=>"Mateus Uribe",'año'=>1991,'posicion'=>"Medio",'estatura'=>1.80));  
-echo("<br>");
-print_r($Jugadores)
-foreach($usuarios as $clavesArreglosUnidimensionales=>$arreglosUnidimensionales){
-   echo("<br>");
-    foreach($arreglosUnidimensionales  as $valorers){
-        
-       echo($valorers);
-       echo("<br>");
+$jugadores=array(
+    'Jugador 1'=>array('Nombre'=>"Radamel Falcao",'años'=>calcularedadjugadores(1986,2020),'posicion'=>"Delantero",'Biotipo'=>biotipojugadores10(1.77)),
+    'Jugador 2'=>array('Nombre'=>"James Rodríguez",'años'=>calcularedadjugadores(1991,2020),'posicion'=>"Mediocampista",'Biotipo'=>biotipojugadores10(1.81)),
+    'Jugador 3'=>array('Nombre'=>"Juan Cuadrado",'años'=>calcularedadjugadores(1988,2020),'posicion'=>"Delantero",'Biotipo'=>biotipojugadores10(1.78)),
+    'Jugador 4'=>array('Nombre'=>"Yerry Mina",'años'=>calcularedadjugadores(1994,2020),'posicion'=>"Defensor",'Biotipo'=>biotipojugadores10(1.95)),
+    'Jugador 5'=>array('Nombre'=>"David Ospina",'años'=>calcularedadjugadores(1988,2020),'posicion'=>"Portero",'Biotipo'=>biotipojugadores10(1.83)),
+    'Jugador 6'=>array('Nombre'=>"Davinsón Sanchez",'años'=>calcularedadjugadores(1996,2020),'posicion'=>"Delantero",'Biotipo'=>biotipojugadores10(1.87)),
+    'Jugador 7'=>array('Nombre'=>"Duvan Zapata",'años'=>calcularedadjugadores(1991,2020),'posicion'=>"Delantero",'Biotipo'=>biotipojugadores10(1.86)),
+    'Jugador 8'=>array('Nombre'=>"Wilmar Barrios",'años'=>calcularedadjugadores(1993,2020),'posicion'=>"Mediocampista",'Biotipo'=>biotipojugadores10(1.78)),
+    'Jugador 9'=>array('Nombre'=>"Mateus Uribe",'años'=>calcularedadjugadores(1991,2020),'posicion'=>"Mediocampista",'Biotipo'=>biotipojugadores10(1.80)));  
 
-
+    foreach($jugadores as $clavemayorjugadores=>$jugadores){    
+    echo ("<br>Los datos del ".$clavemayorjugadores.", son :<br>");
+    foreach ($jugadores as $clave=>$valor){
+    echo($clave." : ".$valor."<br>");
     }
 }
 
+echo("<br><br>................................<br><br>");
+
 
 ?>
+
+    
 
