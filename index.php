@@ -79,7 +79,7 @@ $IMC=$peso/($altura*$altura);
     echo("Sueldo Mensual <br>");
     $Horastrab=36;
     $Pagosemanal1=20000;
-   echo("Para un total de: $Horastrab"."Horas."."se obtiene un valor hora de:."."$".$Pagosemanal1);
+   echo("Para un total de: $Horastrab "." Horas se obtiene un valor hora de: $Pagosemanal1");
    echo "<br>";
     if($Horastrab<=40){
         $Pagosemanal=$Horastrab*20000;
@@ -194,9 +194,9 @@ $jugadores=array(
     'Jugador 8'=>array('Nombre'=>"Wilmar Barrios",'años'=>calcularedadjugadores(1993,2020),'posicion'=>"Mediocampista",'Biotipo'=>biotipojugadores10(1.78)),
     'Jugador 9'=>array('Nombre'=>"Mateus Uribe",'años'=>calcularedadjugadores(1991,2020),'posicion'=>"Mediocampista",'Biotipo'=>biotipojugadores10(1.80)));  
 
-    foreach($jugadores as $clavemayorjugadores=>$jugadores){    
+    foreach($jugadores as $clavemayorjugadores=>$Arreglojugadores){    
     echo ("<br>Los datos del ".$clavemayorjugadores.", son :<br>");
-    foreach ($jugadores as $clave=>$valor){
+    foreach ($Arreglojugadores as $clave=>$valor){
     echo($clave." : ".$valor."<br>");
     }
 }
